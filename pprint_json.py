@@ -21,7 +21,11 @@ def load_data_from_file(filepath):
 
 
 def pretty_print_json(json_content_loaded):
-    json_content_dumped = json.dumps(json_content_loaded, indent=4, ensure_ascii=False)
+    json_content_dumped = json.dumps(
+        json_content_loaded,
+        indent=4,
+        ensure_ascii=False
+    )
     print(json_content_dumped)
 
 

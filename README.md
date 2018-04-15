@@ -1,4 +1,4 @@
-#Prettify JSON
+# Prettify JSON
 Simple script that pretty prints JSON content of provided file.
 ## Usage
 Python >= 3.5 required.

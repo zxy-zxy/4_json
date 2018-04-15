@@ -29,13 +29,13 @@ def pretty_print_json(json_content_loaded):
     print(json_content_dumped)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = create_parser()
     args = parser.parse_args()
     try:
         json_content_loaded = load_data_from_file(args.filepath)
-    except FileNotFoundError as e:
-        sys.exit(e)
-    except JSONDecodeError as e:
-        sys.exit(e)
+    except FileNotFoundError:
+        sys.exit("Error has occured while reading file.")
+    except JSONDecodeError:
+        sys.exit("Error has occured whilte parsing data.")
     pretty_print_json(json_content_loaded)
